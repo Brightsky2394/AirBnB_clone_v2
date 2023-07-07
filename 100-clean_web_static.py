@@ -4,7 +4,7 @@ from fabric.api import *
 from datetime import datetime
 import os
 
-env.hosts = ['34.73.70.32', '3.85.244.69']
+env.hosts = ['52.87.231.71', '54.210.9.50']
 
 
 @runs_once
@@ -33,7 +33,7 @@ def do_pack():
 
         return (os.path)
 
-    except:
+    except Exception:
         return None
 
 
@@ -72,7 +72,7 @@ def do_deploy(archive_path):
         print("New version deployed!")
         return True
 
-    except:
+    except Exception:
         return False
 
 
@@ -93,7 +93,7 @@ def do_clean(number=0):
 
     try:
         number = int(number)
-    except:
+    except Exception:
         return None
 
     if number < 0:

@@ -16,6 +16,7 @@ def close_db(error):
     """ Remove the current SQLAlchemy Session """
     storage.close()
 
+
 @app.route('/hbnb_filters', strict_slashes=False)
 def hbnb_filter():
     """ HBNB filters """
@@ -29,6 +30,8 @@ def hbnb_filter():
     return render_template('10-hbnb_filters.html',
                            states=st_ct,
                            amenities=amenities)
+
+
 if __name__ == "__main__":
     """ Main Function """
     app.run(host='0.0.0.0', port=5000)

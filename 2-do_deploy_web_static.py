@@ -31,7 +31,7 @@ def do_pack():
 
         return (os.path)
 
-    except:
+    except Exception:
         return None
 
 
@@ -70,5 +70,5 @@ def do_deploy(archive_path):
         print("New version deployed!")
         return True
 
-    except:
+    except Exception:
         return False
